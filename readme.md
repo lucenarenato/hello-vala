@@ -8,6 +8,8 @@ A sintaxe da Vala é semelhante ao C #, modificada para melhor se adaptar a GObj
 
 > Vala é uma linguagem de programação orientada a objetos, com sintaxe inspirada em C#. Com um compilador auto-hospedado que gera código em C que usa GObject, foi criada para ser usada no desenvolvimento de aplicações para GNOME, e posteriormente foi adotada pelo elementary OS.
 
+Vala is a programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements, and without using a different ABI compared to applications and libraries written in C. It uses the GObject type system to create classes and interfaces declared in the Vala source code.
+
 ## Dependências:
 
 - GTK+ 2.0 >= 2.10
@@ -24,6 +26,15 @@ sudo apt-get install libgtksourceview2.0-0
 sudo apt install valac
 sudo apt install valac-bin
 ```
+## exec
+
+```
+valac hello.vala
+valac -X -lm tpk.vala
+valac tpk.vala -C -H tpk.h
+```
+
+Se você deseja ter um arquivo de cabeçalho C para seu projeto, pode usar a opção -H:
 
 Compilando e instalando:
 
@@ -31,6 +42,10 @@ O primeiro passo é baixar e descompactar o Vala:
 
 - wget -c http://ftp.gnome.org/pub/GNOME/sources/vala/0.7/vala-0.7.0.tar.gz
 - tar -xvf vala-0.7.0.tar.gz
+ 
+## tutorial
+* https://wiki.gnome.org/Projects/Vala/Tutorial
+* https://naaando.gitbooks.io/the-vala-tutorial/content/en/
  
 - https://forum.elementarybr.org/d/9-a-algum-curso-ou-livro-onde-ensina-vala
 - Tutorial sobre Vala em PDF : https://legacy.gitbook.com/book/naaando/the-vala-tutorial/details/pt-br
